@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+  <div class="logo">
+    <img src="https://logosmarcas.net/wp-content/uploads/2020/04/Minecraft-Logo.png" alt="Logo do Minecraft">
+  </div>
+  <div id="selecaoIdiomas" class="top-menu" style="display: none;">
+    <label for="idioma">Escolha o Idioma:</label>
+    <select id="idioma" name="idioma">
+      <option value="portugues">Português</option>
+      <option value="ingles">Inglês</option>
+      <option value="espanhol">Espanhol</option>
+      <!-- Adicione mais idiomas conforme necessário -->
+    </select>
+  </div>
+  <div class="menu">
+    <a href="#" onclick="iniciarJogo()">Iniciar Jogo</a>
+    <a href="configuracoes.html">Configurações</a>
+    <a href="#" onclick="mostrarIdiomas()">Idiomas</a>
+    <a href="#" onclick="fecharPagina()">Sair</a>
+  </div>
+  <div class="bottom-menu">
+    <button onclick="mostrarAcessibilidade()">Acessibilidade</button>
+    <button onclick="mostrarSkins()">Skins</button>
+  </div>
+
+  <script>
+    function fecharPagina() {
+      window.close();
+    }
+
+    function iniciarJogo() {
+      // Adicione aqui a lógica para iniciar o jogo
+      alert('Iniciando o jogo...');
+    }
+
+    function mostrarIdiomas() {
+      var selecaoIdiomas = document.getElementById('selecaoIdiomas');
+      selecaoIdiomas.style.display = (selecaoIdiomas.style.display === 'none') ? 'block' : 'none';
+    }
+
+    function mostrarAcessibilidade() {
+      alert('Configurações de Acessibilidade');
+    }
+
+    function mostrarSkins() {
+      // Ação padrão para abrir o site em uma nova guia
+      window.open('https://pt.namemc.com/minecraft-skins', '_blank');
+    }
+  </script>
+</body>
+
+</html>
